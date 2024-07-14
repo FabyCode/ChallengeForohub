@@ -1,13 +1,12 @@
 package com.alurachallenge.forohub.domain.user;
 
-import org.springframework.security.core.userdetails.User;
 
 public record ListarUsersDTO(Long id,
                              String name,
                              String email
 ){
-    public ListarUsuariosDTO(User usuario){
+    public ListarUsersDTO(User user){
 
-        this(usuario.getId(),usuario.getName(),usuario.getEmail());
+        this(user.getId(),user.getName(),user.getEmail());
     }
 }
